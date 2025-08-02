@@ -1,4 +1,4 @@
-// File: C:\Users\GOKUL\Documents\Task project\tier-events-showcase\src\app\layout.tsx
+// File: C:\Users\GOKUL\Documents\Task project\Github\tier-event-showcase\src\app\layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

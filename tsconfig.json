@@ -18,7 +18,8 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "types": ["jest", "node"],
+    // "types": ["jest", "node"],
+    "types": ["node"],
     "plugins": [
       {
         "name": "next"

@@ -1,6 +1,7 @@
 'use client';
 import TierBadge from "./TierBadge";
 import { format } from "date-fns";
+import Image from 'next/image';
 
 interface EventCardProps {
   event: {
@@ -18,13 +19,20 @@ export default function EventCard({ event, unlocked }: EventCardProps) {
   return (
     <div className="relative group bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-gray-100">
       <div className="aspect-video bg-gray-100 overflow-hidden">
-        <img
+        {/* <img
           src={event.image_url || "/placeholder.jpg"}
           alt={event.title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        /> */}
+        <Image
+          src={event.image_url || "/placeholder.jpg"}
+          alt={event.title}
+          // width={400}
+          // height={300}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
-      
+
       <div className="p-6">
         <div className="flex justify-between items-start mb-3">
           <h3 className="text-xl font-semibold text-gray-900 line-clamp-2">
@@ -32,15 +40,15 @@ export default function EventCard({ event, unlocked }: EventCardProps) {
           </h3>
           <TierBadge tier={event.tier} />
         </div>
-        
+
         <time className="block text-sm text-blue-600 font-medium mb-3">
           {format(new Date(event.event_date), "PPPP p")}
         </time>
-        
+
         <p className="text-gray-600 line-clamp-3 mb-4">
           {event.description}
         </p>
-        
+
         <div className="flex justify-between items-center">
           <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
             {event.tier} Tier

@@ -32,7 +32,7 @@ export default function UpgradePage() {
     };
 
     fetchTier();
-  }, [isLoaded, isSignedIn]);
+  }, [isLoaded, isSignedIn,router]);
 
   const handleUpgrade = async () => {
     if (!newTier || newTier === currentTier) return;
