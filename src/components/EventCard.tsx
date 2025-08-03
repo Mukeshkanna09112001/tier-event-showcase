@@ -19,16 +19,11 @@ export default function EventCard({ event, unlocked }: EventCardProps) {
   return (
     <div className="relative group bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-gray-100">
       <div className="aspect-video bg-gray-100 overflow-hidden">
-        {/* <img
+        <Image 
           src={event.image_url || "/placeholder.jpg"}
           alt={event.title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        /> */}
-        <Image
-          src={event.image_url || "/placeholder.jpg"}
-          alt={event.title}
-          // width={400}
-          // height={300}
+          width={400}
+          height={300}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
@@ -61,34 +56,3 @@ export default function EventCard({ event, unlocked }: EventCardProps) {
     </div>
   );
 }
-
-// 'use client';
-// import TierBadge from "./TierBadge";
-// import { format } from "date-fns";
-// import Loader from "./Loader";
-// import Error from "./Error";
-
-// export default function EventCard({ event, unlocked }: any) {
-//   return (
-//     <div className={`border rounded-md overflow-hidden shadow-sm ${!unlocked ? "opacity-60" : ""}`}>
-//       <img
-//         src={event.image_url || "/placeholder.jpg"}
-//         alt={event.title}
-//         className="w-full h-48 object-cover"
-//       />
-//       <div className="p-4">
-//         <div className="flex justify-between items-center mb-2">
-//           <h2 className="text-lg font-semibold">{event.title}</h2>
-//           <TierBadge tier={event.tier} />
-//         </div>
-//         <time className="block text-sm text-gray-600 mb-2">
-//           {format(new Date(event.event_date), "PPP p")}
-//         </time>
-//         <p className="text-gray-700 mb-4">{event.description}</p>
-//         {!unlocked && (
-//           <p className="text-red-600 font-medium">Upgrade to {event.tier} to access</p>
-//         )}
-//       </div>
-//     </div>
-//   );
-// }

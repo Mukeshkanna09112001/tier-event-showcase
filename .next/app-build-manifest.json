@@ -1,47 +1,25 @@
 {
   "pages": {
-    "/_not-found/page": [
-      "static/chunks/webpack-b2e07dee6a1c98b9.js",
-      "static/chunks/4bd1b696-cf72ae8a39fa05aa.js",
-      "static/chunks/964-02efbd2195ef91bd.js",
-      "static/chunks/main-app-b63b696404b45ac2.js",
-      "static/chunks/app/_not-found/page-7f09fcfa7fc4aa0e.js"
-    ],
     "/layout": [
-      "static/chunks/webpack-b2e07dee6a1c98b9.js",
-      "static/chunks/4bd1b696-cf72ae8a39fa05aa.js",
-      "static/chunks/964-02efbd2195ef91bd.js",
-      "static/chunks/main-app-b63b696404b45ac2.js",
-      "static/css/bc6ffe6eb3cc079b.css",
-      "static/chunks/521-d2a96ed9bdafedb2.js",
-      "static/chunks/84-4fb043b3960cb079.js",
-      "static/chunks/108-4cf481cd88699f0a.js",
-      "static/chunks/app/layout-9ca352fc1fe89c9d.js"
-    ],
-    "/upgrade/page": [
-      "static/chunks/webpack-b2e07dee6a1c98b9.js",
-      "static/chunks/4bd1b696-cf72ae8a39fa05aa.js",
-      "static/chunks/964-02efbd2195ef91bd.js",
-      "static/chunks/main-app-b63b696404b45ac2.js",
-      "static/chunks/521-d2a96ed9bdafedb2.js",
-      "static/chunks/84-4fb043b3960cb079.js",
-      "static/chunks/app/upgrade/page-b6745b1f69bc9658.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
     "/page": [
-      "static/chunks/webpack-b2e07dee6a1c98b9.js",
-      "static/chunks/4bd1b696-cf72ae8a39fa05aa.js",
-      "static/chunks/964-02efbd2195ef91bd.js",
-      "static/chunks/main-app-b63b696404b45ac2.js",
-      "static/chunks/521-d2a96ed9bdafedb2.js",
-      "static/chunks/app/page-e4f185ca6e6ce3fa.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
     ],
     "/events/page": [
-      "static/chunks/webpack-b2e07dee6a1c98b9.js",
-      "static/chunks/4bd1b696-cf72ae8a39fa05aa.js",
-      "static/chunks/964-02efbd2195ef91bd.js",
-      "static/chunks/main-app-b63b696404b45ac2.js",
-      "static/chunks/838-5968ff71b0900445.js",
-      "static/chunks/app/events/page-7b3703c6f650abf6.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/events/page.js"
+    ],
+    "/upgrade/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/upgrade/page.js"
     ]
   }
 }

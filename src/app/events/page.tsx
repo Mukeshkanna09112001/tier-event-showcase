@@ -36,7 +36,7 @@ export default async function EventsPage() {
   }
 
   const unlocked = events.filter((e) => canAccess(e.tier, userTier));
-  const lockedTiers = [new Set(events.filter(e => !canAccess(e.tier, userTier)).map(e => e.tier))];
+  const lockedTiers = [...new Set(events.filter(e => !canAccess(e.tier, userTier)).map(e => e.tier))];
 
   return (
     <main className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -84,47 +84,3 @@ export default async function EventsPage() {
     </main>
   );
 }
-
-
-
-// // app/events/page.tsx or similar
-// import { auth } from "@clerk/nextjs/server";
-// import { redirect } from "next/navigation";
-// import { supabase } from "@/lib/supabase";
-// import { getUserTier } from "@/lib/clerk";
-// import { canAccess } from "@/utils/tierUtils";
-// import EventCard from "@/components/EventCard";
-
-// export default async function EventsPage() {
-//  const { userId } = await auth();
-
-//   if (!userId) {
-//     return redirect("/sign-in");
-//   }
-
-//   const userTier = await getUserTier();
-
-//   const { data: events, error } = await supabase
-//     .from("events")
-//     .select("*")
-//     .order("event_date", { ascending: true });
-
-//     console.log("events    ::::::::::::::::::    ",events,  "  error is the ",error);
-    
-
-//   if (error) return <div>Error loading events: {error.message}</div>;
-//   if (!events) return <div>No events available</div>;
-
-//   const unlocked = events.filter(e => canAccess(e.tier, userTier));
-//   const locked = events.filter(e => !canAccess(e.tier, userTier));
-
-//   return (
-//     <main className="p-4">
-//       <h1 className="text-2xl font-bold mb-6">Events for your tier: {userTier}</h1>
-//       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-//         {unlocked.map(e => <EventCard key={e.id} event={e} unlocked />)}
-//         {locked.map(e => <EventCard key={e.id} event={e} unlocked={false} />)}
-//       </div>
-//     </main>
-//   );
-// }
