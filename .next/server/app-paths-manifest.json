@@ -1,5 +1,5 @@
 {
-  "/upgrade/page": "app/upgrade/page.js",
   "/page": "app/page.js",
-  "/events/page": "app/events/page.js"
+  "/events/page": "app/events/page.js",
+  "/upgrade/page": "app/upgrade/page.js"
 }
